@@ -21,19 +21,13 @@ Route::get('/', function () {
     return view(
         'listings',
         [
-            'heading' => "Listings",
             'listings' => $listings
         ]
     );
 });
 
-Route::get('/listing/{id}', function ($id) {
-    $listing = Listing::find($id);
-    return view(
-        'listing',
-        [
-            'heading' => "Listing",
-            'listing' => $listing
-        ]
-    );
+Route::get('/listing/{listing}', function (Listing $listing) {
+    return view('listing', [
+        'listing' => $listing
+    ]);
 });
