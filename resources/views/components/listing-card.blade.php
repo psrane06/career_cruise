@@ -11,7 +11,7 @@
             <x-tags :tagsCSV="$listing->tags" />
 
             <div class="text-lg mt-4">
-                <i class="fa-solid fa-location-dot"></i>{{ $listing->city }}
+                <i class="fa-solid fa-location-dot"></i>{{ $listing->location }}
             </div>
         </div>
     </div>
